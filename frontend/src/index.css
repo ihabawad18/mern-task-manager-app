@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --dark-blue: #0a1930;
+  --light-blue: #1f93ff;
+
+  --color-white: #fff;
+  --color-dark: #333;
+
+  --color-grey: #eee;
+
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  --color-purple: #9d0191;
+  --color-orange: #ff7722;
+
+  --color-primary: #007bff;
+  --color-success: #28a745;
+  --color-danger: orangered;
+
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  padding: 0 10px;
+}
+
+.task-container {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  margin-top: 100px;
+  padding: 3rem 2rem;
+}
+
+.task-form{
+  width: 100%;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.task-form input {
+  width: 85%;
+  height: 3rem;
+  font-size: 1.3rem;
+  padding: 0 5px;
+  outline: none;
+}
+
+.task-form button {
+  width: 15%;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: var(--color-purple);
+  color: #fff;
+  border: none;
+  transition: all 0.3s;
+}
+
+.task-form button:hover {
+  background-color: var(--color-primary);
+}
+
+.stat-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #eee;
+  /* border-left: 5px var(--color-danger) solid; */
+  padding: 10px;
+  margin: 7px 0;
+  
+  animation: slide-in ease 0.5s;
+
+}
+
+
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(40px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.task::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: var(--color-danger);
+}
+
+.completed {
+  position: relative;
+}
+
+.completed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: var(--color-success);
+}
+
+.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-icons > * {
+  margin-left: 7px;
+  cursor: pointer;
+}
