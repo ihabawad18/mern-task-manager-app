@@ -1,6 +1,9 @@
 # Task Manager Full Stack App
 
 This is a full-stack MERN (MongoDB, Express, React, Node.js) application for managing tasks. Users can keep track of both completed and incomplete tasks, edit them, delete them, and mark them as complete.
+You can preview the app on this hosted website
+
+https://task-manager-app-k67o.onrender.com/
 
 ## Key Features
 
