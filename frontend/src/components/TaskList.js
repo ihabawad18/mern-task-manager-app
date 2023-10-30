@@ -30,6 +30,10 @@ const TaskList = () => {
       return toast.error("Input field cannot be empty.");
     }
 
+    if(formData.name.length>20){
+      return toast.error("The name should be at most 20 charachters.");
+    }
+
     try {
       await axios.post(`${URL}/tasks`, formData);
       toast.success("Task added successfully");
