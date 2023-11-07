@@ -16,8 +16,7 @@ https://task-manager-app-k67o.onrender.com/
    * Delete Task:
         Remove tasks from the list.
    * Mark as Complete:
-        Toggle the status of tasks between completed and not completed.* Add New Workouts:
-        Users can effortlessly add new workouts to tailor their exercise routine.
+        Toggle the status of tasks between completed and not completed.
 
 
 ## Technologies Used
